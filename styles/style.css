@@ -40,10 +40,11 @@ nav {
 nav ul {
   display: flex;
   padding: 63px 80px 116px 0px;
+  gap: 40px;
 }
 nav li {
   list-style: none;
-  margin-right: 40px;
+  /* margin-right: 40px; */
 }
 nav li a {
   text-decoration: none;
@@ -310,22 +311,203 @@ footer p {
 
 /* media query styles */
 @media screen and (max-width: 576px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    width: 100%;
-    margin: 0;
+  .nav-title,
+  .upper-banner-section,
+  .quick-list,
+  .facts,
+  .sponsors {
     padding: 0;
+    margin: 0;
+    width: 100%;
+    /* text-align: center; */
   }
   .nav-title {
     padding: 10px 0;
   }
-  nav ul{
-    padding: 0;
+
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  nav ul {
+    padding: 5px;
+    margin-bottom: 10px;
+    column-gap: 15px;
+    border: 2px solid rgb(127, 91, 85);
+  }
+  .upper-banner-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .upper-banner-section p {
+    width: 90%;
+    margin: 10px auto;
+    text-align: justify;
+  }
+  .quick-list {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+    margin: 10px auto;
+  }
+  .quick-list .text-container h2 {
+    text-align: center;
+  }
+  .quick-list .quick-list-description {
+    text-align: justify;
+  }
+  .btn {
     margin: 0;
     text-align: center;
+  }
+  .quick-list .img-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .features .feature-title {
+    margin: 0;
+    width: fit-content;
+    margin: 50px auto 10px auto;
+  }
+  .features .feature-description {
+    width: 90%;
+    margin: 20px auto 10px auto;
+    text-align: justify;
+  }
+  .features .card-section .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .features .feature-img {
+    width: 80%;
+    margin: -30px auto 20px auto;
+  }
+  .features .feature-img .experience {
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+    border-radius: 8px;
+    background-color: #ff900e;
+    width: 250px;
+    height: 40px;
+    position: relative;
+    bottom: 100px;
+    right: -90px;
+  }
+  .facts {
+    width: 90%;
+    margin: 10px 0;
+    margin-top: -70px;
+  }
+  .facts .facts-text {
+    margin: 0;
     width: 100%;
+    text-align: center;
+  }
+  .facts .facts-description {
+    text-align: justify;
+    margin: 0 20px;
+    width: 80%;
+    margin: 0 auto 50px auto;
+  }
+  .facts .profile {
+    flex-direction: column;
+  }
+  .facts .profile .profile-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .facts .profile .profile-card img {
+    object-fit: cover;
+    width: 20%;
+  }
+  .sponsors {
+    margin-top: 30px;
+  }
+  .sponsors .sponsors-description {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  .sponsors .sponsors-img-container {
+    gap: 20px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .sponsors .sponsors-img-container img {
+    width: 7.5%;
+    margin: -30px 0 30px 0;
+  }
+  footer {
+    margin: 0;
+    border-radius: 8px;
+    background: #fff4e7;
+    /* width: 1440px; */
+    height: 100px;
+  }
+}
+
+/* media query for tablet */
+
+@media screen and (min-width: 577px) and (max-width: 960px) {
+  header {
+    width: 100%;
+  }
+  .upper-banner-section {
+    padding: 0;
+    margin-top: -50px;
+  }
+  .upper-banner-section p {
+    width: 90%;
+    margin: 20px auto 50px auto;
+    text-align: center;
+  }
+  .features {
+    width: 90%;
+    margin: 0;
+    margin: 0 auto;
+  }
+  .facts {
+    margin: 80px 0 0 0;
+    padding: 0;
+    text-align: center;
+  }
+  .facts .facts-description {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto 30px auto;
+  }
+  .profile {
+    margin: 0 auto 50px auto;
+    padding: 0;
+    width: 100%;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  .sponsors .sponsors-img-container {
+    gap: 80px;
+    margin: 80px auto 20px auto;
+    justify-content: center;
+  }
+  .sponsors .sponsors-img-container img {
+    width: 10.5%;
+    margin: -30px 0 30px 0;
+  }
+  footer {
+    margin: 0;
+    border: 4px solid tomato;
+    border-radius: 8px;
+    background: #fff4e7;
+    height: 100px;
   }
 }
